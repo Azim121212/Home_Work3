@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Main {
 
    public static void main(String[] args) {
@@ -15,7 +17,25 @@ public class Main {
            }
        }
        System.out.println(
-               "Arifmetic number "  + summa/col
-       );
+               "Arifmetic number "  + summa/col);
+
+
+
+       int[] arr = {8, -2, -4, 2, 3, 6};
+       int min;
+       for (int i = 0; i < arr.length; i++) {
+           min = i;
+           for (int j = i + 1; j < arr.length; j++) {
+               if (arr[j] < arr[min]) {
+                   min = j;
+               }
+           }
+           if (min != i) {
+               int n = arr[i];
+               arr[i] = arr[min];
+               arr[min] = n;
+               System.out.println(Arrays.toString(arr));
     }
+}
+}
 }
